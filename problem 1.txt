@@ -1,0 +1,35 @@
+#Problem 1
+
+new=[]
+n=int(input())
+l=eval(input())
+for i in l:
+  if i[0] not in new:
+    new.append(i[0])
+dict={}
+for i in new:
+  dict[i]=[]
+for i in dict:
+  for j in l:
+    if i==j[0]:
+      dict[i].append(j[l])
+dict2={}
+r=0
+for i in range(len(dict)):
+  for j in range(i+1,len(dict)):
+    res= len(set(dict[list(dict)[i]]) & set(dict[list(dict)[j]]))/float(len(set(dict[list(dict)(i)]) | set(dict[list(dict)[j]])))*100
+    if 1!=j:
+      dict2[r]=[round(res,2),list(dict)[j],list(dict)[i]]
+      r=r+1
+a=list(dict2.values())
+for k in range(len(a)):
+  if a[k][1]>a[k][2]:
+    c=a[k][1]
+    a[k][1]=a[k][2]
+    a[k][2]=c
+
+a.sort(key = lambda a: a[0],reverse=True)
+l=[]
+for q in range(n):
+  l+=[(a[q][1],a[q][2])]
+print(l)
