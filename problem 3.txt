@@ -1,0 +1,10 @@
+#Problem 3
+
+a=input()
+n=set()
+st=eval(input())
+b=len(a)
+for k in st:
+    if a==k[0:b]:
+        n.add(k)
+print(n)
